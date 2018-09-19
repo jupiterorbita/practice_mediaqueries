@@ -1,29 +1,65 @@
 *{
     margin: 0;
     padding: 0;
+    outline: 1px dotted red;
+    /* box-sizing includes the padding and border when calculating width */
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 /* all buttons */
-.navbtn {
-    width: 200px;
-    height: 150px;
+button {
+    background-color: aqua;
+    /* width: 200px;
+    height: 150px; */
 }
 
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span.book {
+    font-style: italic;
+}
+
+.col {
+    /* set the universal stylings for all columns, regardless of screen size */
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+}
+.row {
+    /* set any stylings you would like foe each row, regardless of screen size */
+    padding: 10px;
+    border: 3px solid blue;
+    /* margin: 3px 3px 0 3px; */
+}
+
+
+/* ======================== */
 /* check media query screen */
+/* ======================== */
 
 @media only screen and (max-width: 480px) {
-    .navbtn {
-        background-color: yellow;
+    .sm-4 {
+        width: 99%;
+    }
+    .sm-0 {
+        display: none;
     }
 }
 
 @media only screen and (min-width: 481px) {
-    .navbtn {
-        background-color: blue;
+    .med-2 {
+        width: 49%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .navbtn {
-        background-color: red;
+    .lg-1 {
+        width: 24%;
+    }
+    .lg-3 {
+        width: 74%;
     }
 }
